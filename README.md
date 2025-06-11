@@ -1,4 +1,5 @@
-# ALX Project 0x04: Next.js Project Setup
+# StateCraft: Mastering State Management with Redux & Context API
+## ALX Project 0x04: Next.js Project Setup
 
 This project demonstrates the basic setup of a Next.js application with a simple directory structure and a sample page.
 
@@ -49,7 +50,7 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-# ALX Project 0x05: Next.js Counter App with ContextAPI Global State
+## ALX Project 0x05: Next.js Counter App with ContextAPI Global State
 
 This project demonstrates global state management in a Next.js application using **React ContextAPI**. The counter value is accessible and updatable from multiple components (e.g., Header and CounterApp) without prop drilling.
 
@@ -186,7 +187,7 @@ const CounterApp: React.FC = () => {
 
 ### `components/layouts/Header.tsx`
 
-Header displays the current count from ContextAPI:
+The header displays the current count from ContextAPI:
 
 ```tsx
 import { useCount } from "@/context/CountContext";
@@ -201,13 +202,13 @@ const Header: React.FC = () => {
 
 
 
-# ALX Project 0x06: Next.js Counter App with Redux Global State
+## ALX Project 0x06: Next.js Counter App with Redux Global State
 
 This project demonstrates global state management in a Next.js application using **Redux Toolkit**. The counter value is accessible and updatable from multiple components (e.g., Header and CounterApp) without prop drilling.
 
 ---
 
-## Features
+### Features
 
 - **Redux Toolkit** for global state management
 - Counter value is shared between Header and CounterApp components
