@@ -1,12 +1,12 @@
-import React from "react";
 import Link from "next/link";
+import Button from "../common/Button";
 import { usePathname } from "next/navigation";
-// Update the import path below if your CountContext is located elsewhere
-import { useCount } from "../../context/CountContext";
+import { useCount } from "@/context/CountContext"";
 
 const Header: React.FC = () => {
-  const pathname = usePathname();
-  const { count } = useCount();
+
+  const pathname = usePathname()
+  const { count } = useCount()
 
   return (
     <header className="fixed w-full bg-white shadow-md">
@@ -14,17 +14,25 @@ const Header: React.FC = () => {
         <Link href="/" className="text-3xl md:text-5xl font-bold text-gray-800 tracking-tight">
           Splash App
         </Link>
+
+        {/* Button Group */}
         <div className="flex gap-4">
           {
             !["/counter-app"].includes(pathname) ? (
               <>
-                <button className="bg-red-500 text-white px-4 py-2 rounded">Sign In</button>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded">Sign Up</button>
-              </>
+              <Button
+            buttonLabel="Sign In"
+            buttonBackgroundColor="red"
+          />
+          <Button
+            buttonLabel="Sign Up"
+            buttonBackgroundColor="blue"
+          /></>
             ) : (
-              <p className="font-semibold text-lg">Current count : {count}</p>
+              <p className=" font-semibold text-lg">Current count : {count}</p>
             )
           }
+
         </div>
       </div>
     </header>
